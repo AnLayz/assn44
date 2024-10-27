@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dowry Price Calculator</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <h1 class="text-center">Dowry Price Calculator</h1>
+
+        <div class="card p-4 mt-3">
+            <div class="form-group">
+                <input type="text" id="brideGroomNameInput" class="form-control" placeholder="Enter Bride/Groom's Name">
+            </div>
+
+            <div class="form-group">
+                <input type="number" id="initialBidInput" class="form-control" placeholder="Enter Starting Bid">
+            </div>
+
+            <div class="form-group">
+                <select id="educationLevelSelect" class="form-control">
+                    <option disabled selected>Select Education Level</option>
+                    <option value="1.5">Undergraduate degree</option>
+                    <option value="1.2">College degree</option>
+                    <option value="1.05">High school degree</option>
+                    <option value="0.9">Middle school degree</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <select id="familyNetWorthSelect" class="form-control">
+                    <option disabled selected>Select Family Net Worth</option>
+                    <option value="2">More than $10,000</option>
+                    <option value="1.5">Between $5,000 and $10,000</option>
+                    <option value="1.2">Less than $5,000</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <select id="casteSelect" class="form-control">
+                    <option disabled selected>Select Caste</option>
+                    <option value="100">Brahmin (+100)</option>
+                    <option value="50">Kshatriya (+50)</option>
+                    <option value="20">Vaishya (+20)</option>
+                    <option value="10">Shudra (+10)</option>
+                    <option value="-50">Varna - Untouchable (-50)</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Skills</label>
+                <div>
+                    <input type="checkbox" class="skillsCheckboxes" value="10" id="skillInstrument">
+                    <label for="skillInstrument">Playing a musical instrument (+10)</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="skillsCheckboxes" value="20" id="skillCooking">
+                    <label for="skillCooking">Good cook (+20)</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="skillsCheckboxes" value="15" id="skillEasygoing">
+                    <label for="skillEasygoing">Easygoing character (+15)</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="skillsCheckboxes" value="10" id="skillSinging">
+                    <label for="skillSinging">Sings well (+10)</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Age</label>
+                <div>
+                    <input type="radio" name="age" class="ageRadioButtons" value="1.5" id="age18to23">
+                    <label for="age18to23">18-23</label>
+                </div>
+                <div>
+                    <input type="radio" name="age" class="ageRadioButtons" value="1.2" id="age24to27">
+                    <label for="age24to27">24-27</label>
+                </div>
+                <div>
+                    <input type="radio" name="age" class="ageRadioButtons" value="0.95" id="age28Plus">
+                    <label for="age28Plus">28+</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Reputation</label>
+                <div>
+                    <input type="checkbox" class="reputationCheckboxes" value="0.85" id="reputationParents">
+                    <label for="reputationParents">Gossips about parent's attitude</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="reputationCheckboxes" value="0.9" id="reputationCharacter">
+                    <label for="reputationCharacter">Gossips about character</label>
+                </div>
+                <div>
+                    <input type="checkbox" class="reputationCheckboxes" value="-20" id="reputationGeneral">
+                    <label for="reputationGeneral">General gossip (-20)</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <textarea id="loveLetterTextarea" class="form-control" maxlength="500" rows="3" placeholder="Write your love letter"></textarea>
+            </div>
+
+            <button id="calculatePriceButton" class="btn btn-primary btn-block">Calculate Price</button>
+        </div>
+
+        <div id="resultContainer" class="mt-4"></div>
+    </div>
+
+    <script src="calculator.js"></script>
+</body>
+</html>
